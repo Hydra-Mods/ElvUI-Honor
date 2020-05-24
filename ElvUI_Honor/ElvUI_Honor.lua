@@ -1,5 +1,5 @@
-local E, L, V, P, G = unpack(ElvUI)
-local DT = E:GetModule('DataTexts')
+local E = unpack(ElvUI)
+local DT = E:GetModule("DataTexts")
 
 local floor = floor
 local UnitHonor = UnitHonor
