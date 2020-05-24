@@ -46,7 +46,7 @@ local OnEnter = function(self)
 	if (Kills > 0) then
 		DT.tooltip:AddLine(" ")
 		DT.tooltip:AddLine(HONORABLE_KILLS)
-		DT.tooltip:AddLine(Kills, 1, 1, 1)
+		DT.tooltip:AddLine(BreakUpLargeNumbers(Kills), 1, 1, 1)
 	end
 	
 	DT.tooltip:Show()
