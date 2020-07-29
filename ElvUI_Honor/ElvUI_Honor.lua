@@ -25,13 +25,13 @@ local OnClick = function()
 end
 
 local OnEnter = function(self)
-	DT:SetupTooltip(self)
+	DT.tooltip:ClearLines()
 	
 	local Honor = UnitHonor("player")
 	local MaxHonor = UnitHonorMax("player")
 	local HonorLevel = UnitHonorLevel("player")
-	local NextRewardLevel = C_PvP.GetNextHonorLevelForReward(HonorLevel)
-	local RewardInfo = C_PvP.GetHonorRewardInfo(NextRewardLevel)
+	local NextRewardLevel = _G.C_PvP.GetNextHonorLevelForReward(HonorLevel)
+	local RewardInfo = _G.C_PvP.GetHonorRewardInfo(NextRewardLevel)
 	local Percent = floor((Honor / MaxHonor * 100 + 0.05) * 10) / 10
 	local Remaining = MaxHonor - Honor
 	local RemainingPercent = floor((Remaining / MaxHonor * 100 + 0.05) * 10) / 10
@@ -56,9 +56,9 @@ local OnEnter = function(self)
 		local RewardText = select(11, GetAchievementInfo(RewardInfo.achievementRewardedID))
 		
 		if RewardText:match("%S") then
-			GameTooltip:AddLine(" ")
-			GameTooltip:AddLine(PVP_PRESTIGE_RANK_UP_NEXT_MAX_LEVEL_REWARD:format(NextRewardLevel))
-			GameTooltip:AddLine(RewardText, 1, 1, 1)
+			DT.tooltip:AddLine(" ")
+			DT.tooltip:AddLine(PVP_PRESTIGE_RANK_UP_NEXT_MAX_LEVEL_REWARD:format(NextRewardLevel))
+			DT.tooltip:AddLine(RewardText, 1, 1, 1)
 		end
 	end
 	
@@ -68,7 +68,7 @@ end
 local ValueColorUpdate = function(hex)
 	String = strjoin("", "%s: ", hex, "%s|r / ", hex, "%s|r")
 	
-	if (Panel ~= nil) then
+	if Panel then
 		OnEvent(Panel)
 	end
 end
