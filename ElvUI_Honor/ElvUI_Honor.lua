@@ -11,10 +11,6 @@ local String = "%s: %s / %s"
 local Panel
 
 local OnEvent = function(self, event, unit)
-	if (unit and unit ~= "player") then
-		return
-	end
-	
 	self.text:SetFormattedText(String, Honor, UnitHonor("player"), UnitHonorMax("player"))
 	
 	Panel = self
