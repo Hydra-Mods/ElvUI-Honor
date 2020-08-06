@@ -11,7 +11,7 @@ local String = "%s: %s / %s"
 local Panel
 
 local OnEvent = function(self, event, unit)
-	self.text:SetFormattedText(String, Honor, UnitHonor("player"), UnitHonorMax("player"))
+	self.text:SetText(format(String, Honor, UnitHonor("player"), UnitHonorMax("player")))
 	
 	Panel = self
 end
@@ -53,7 +53,7 @@ local OnEnter = function(self)
 		
 		if RewardText:match("%S") then
 			DT.tooltip:AddLine(" ")
-			DT.tooltip:AddLine(PVP_PRESTIGE_RANK_UP_NEXT_MAX_LEVEL_REWARD:format(NextRewardLevel))
+			DT.tooltip:AddLine(format(PVP_PRESTIGE_RANK_UP_NEXT_MAX_LEVEL_REWARD, NextRewardLevel))
 			DT.tooltip:AddLine(RewardText, 1, 1, 1)
 		end
 	end
