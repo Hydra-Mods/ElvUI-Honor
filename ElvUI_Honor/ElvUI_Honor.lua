@@ -2,6 +2,7 @@ local E = unpack(ElvUI)
 local DT = E:GetModule("DataTexts")
 
 local floor = floor
+local format = format
 local UnitHonor = UnitHonor
 local UnitHonorMax = UnitHonorMax
 local UnitHonorLevel = UnitHonorLevel
