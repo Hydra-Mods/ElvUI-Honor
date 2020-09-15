@@ -5,7 +5,6 @@ local floor = floor
 local format = format
 local UnitHonor = UnitHonor
 local UnitHonorMax = UnitHonorMax
-local UnitHonorLevel = UnitHonorLevel
 local BreakUpLargeNumbers = BreakUpLargeNumbers
 local Honor = HONOR
 local String = "%s: %s / %s"
