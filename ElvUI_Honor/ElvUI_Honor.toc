@@ -1,6 +1,6 @@
-## Interface: 90002
+## Interface: 90005
 ## Title: |cff1784d1ElvUI|r Honor
-## Version: 1.10
+## Version: 1.11
 ## Notes: Create a data text to display honor
 ## Author: Hydra
 ## RequiredDeps: ElvUI
