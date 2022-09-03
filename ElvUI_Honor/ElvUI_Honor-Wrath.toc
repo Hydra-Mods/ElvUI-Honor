@@ -1,8 +1,8 @@
-## Interface: 90207
+## Interface: 30400
 ## Title: |cff1784d1ElvUI|r Honor
 ## Version: 1.17
 ## Notes: Create a data text to display honor
 ## Author: Hydra
 ## RequiredDeps: ElvUI
 
-ElvUI_Honor.lua
+ElvUI_ClassicHonor.lua
